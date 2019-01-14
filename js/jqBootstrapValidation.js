@@ -51,7 +51,7 @@
 
           $inputs.each(function (i, el) {
             var $this = $(el),
-              $controlGroup = $this.parents(".form-group").first();
+              $controlGroup = $this.parents(".form-group, .form-check").first();
             if (
               $controlGroup.hasClass("warning")
             ) {
@@ -82,7 +82,7 @@
 
           // Get references to everything we're interested in
           var $this = $(this),
-            $controlGroup = $this.parents(".form-group").first(),
+            $controlGroup = $this.parents(".form-group, .form-check").first(),
             $helpBlock = $controlGroup.find(".help-block").first(),
             $form = $this.parents("form").first(),
             validatorNames = [];
@@ -189,7 +189,7 @@
               } else if ($this.data("validationEmailMessage")) {
                 message = $this.data("validationEmailMessage");
               }
-              $this.data("validationValidemailMessage", message);
+              $this.data("validationValidemailMessage", message);			  
             }
             // ---------------------------------------------------------
             //                                                MINCHECKED
@@ -482,7 +482,7 @@
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 } else {
                   // Multiple? Being sloppy? Glue them together into an UL.
-                  $helpBlock.html("<ul class=\"list-unstyled alert alert-warning\" role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
+                  $helpBlock.html("<ul class=\"list-unstyled alert alert-warning mt-2\" role=\"alert\"><li>" + errorsFound.join("</li><li>") + "</li></ul>" +
                     ( settings.options.prependExistingHelpBlock ? $helpBlock.data("original-contents") : "" ));
                 }
               } else {
@@ -510,7 +510,7 @@
 
             var
               $this = $(this),
-              $controlGroup = $this.parents(".form-group").first(),
+              $controlGroup = $this.parents(".form-group, .form-check").first(),
               $helpBlock = $controlGroup.find(".help-block").first();
 
             // remove our events

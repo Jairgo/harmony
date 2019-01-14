@@ -12,7 +12,7 @@
 	$to = 'harmonynailspuebla@gmail.com'; // Email submissions are sent to this email
 
 	// Create email	
-	$email_subject = "Message from www.harmonypuebla.com.";
+	$email_subject = "Message from a Blocs website.";
 	$email_body = "You have received a new message. \n\n".
 				  "Name_3538_12870_31790: $name_3538_12870_31790 \nEmail_3538_12870_31790: $email_3538_12870_31790 \nMessage_3538_12870_31790: $message_3538_12870_31790 \nMessage3_3538_12870_31790: $message3_3538_12870_31790 \n";
 	$headers = "MIME-Version: 1.0\r\nContent-type: text/plain; charset=UTF-8\r\n";	
